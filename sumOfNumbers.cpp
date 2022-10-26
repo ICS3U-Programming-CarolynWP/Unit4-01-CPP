@@ -22,18 +22,21 @@ int main() {
     // User input for the two questions
     std::cout << "Please enter a positive integer: ";
     std::cin >> userNumber;
-    // Try Catch statement to make sure the answer is an integer
+    // Try Catch statement to make sure the answer is an integer and
+    // Whole number
     try {
         userInteger = std::stoi(userNumber);
         float userFloat = stof(userNumber);
-        // To make sure the user input is a whole number 
+        // To make sure the user input is a whole number
         // (credits to you Ms. Raffin)
         if (userFloat != static_cast<int>(userFloat) || userFloat <= 0) {
             std::cout << "Please enter a WHOLE number!\n";
         }
+        // IF statement to make sure the input is positive
         if (userInteger < 0) {
             std::cout << "Please enter a POSITIVE number!\n";
         } else {
+            // While loop to add up the sum
             while (counter <= userInteger) {
                 std::cout << counter << "+ ";
                 sum = counter + sum;
